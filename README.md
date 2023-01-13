@@ -5,7 +5,6 @@
 Устанавливаем Модули:
 ```python
 pip install django
-pip install django-extensions
 ```
 
 ## Загружаем данные из json файла:
