@@ -3,11 +3,28 @@
 <head>
     <meta charset="UTF-8">
     <title>Item</title>
+    <style>
+        * {
+            font-family: "Open Sans";
+        }
+        a {
+            text-decoration: none;
+        }
+        a:hover {
+            text-decoration: underline;
+        }
+    </style>
 </head>
 <body>
 <h1> Страница товара </h1>
-Название: {{ name }} <br>
-Количество: {{ quantity }} <br>
+Название: {{ item.name }} <br>
+{% if item.count == 0 %}
+Количество: <span style="color: #FF0000;">Товара нет на складе</span> <br>
+{% else %}
+Количество: {{ item.count }} <br>
+{% endif %}
+Бренд: {{ item.brand }} <br>
+Описание: {{ item.desc }} <br>
 <a href="/items"> Назад </a>
 </body>
 </html>

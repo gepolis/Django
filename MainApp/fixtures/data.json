@@ -12,7 +12,7 @@
         "model": "MainApp.Item",
         "pk": 2,
         "fields": {
-            "name": "Ноутбук ASUS Laptop 13",
+            "name": "Ноутбук ASUS Laptop 14",
             "brand": "ASUS",
             "count": 5
         }
