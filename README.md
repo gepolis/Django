@@ -17,5 +17,5 @@ pip install django-extensions
 
 ## Загружаем данные из json файла:
 ```python
-python manage.py loaddata data.json
+python manage.py loaddata db.json
 ```
