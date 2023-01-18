@@ -19,6 +19,17 @@ def items_list(request):
     }
     return render(request,"items.html",context)
 
+def items_brand_list(request,brand):
+    # items_result = "<ol>"
+    # for item in items:
+    #     items_result += "<li>" + f"<a href ='/item/{item['id']}'> " + item['name'] + "</a>" + "</li>"
+    # items_result += "</ol>"
+    # return HttpResponse(items_result)
+    context = {
+        "items": Item.objects.all().filter(brand=brand),
+        "brand": brand
+    }
+    return render(request,"items_brand.html",context)
 
 
 

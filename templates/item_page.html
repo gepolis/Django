@@ -23,7 +23,7 @@
 {% else %}
 Количество: {{ item.count }} <br>
 {% endif %}
-Бренд: {{ item.brand }} <br>
+Бренд: <a href="/items/{{item.brand}}">{{ item.brand }}</a> <br>
 Описание: {{ item.desc }} <br>
 <a href="/items"> Назад </a>
 </body>
