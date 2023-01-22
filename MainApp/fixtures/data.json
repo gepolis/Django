@@ -1,0 +1,47 @@
+[
+    {
+        "model": "MainApp.Item",
+        "pk": 1,
+        "fields": {
+            "name": "Ноутбук ASUS Laptop 14",
+            "brand": "ASUS",
+            "count": 27
+        }
+    },
+    {
+        "model": "MainApp.Item",
+        "pk": 2,
+        "fields": {
+            "name": "Ноутбук ASUS Laptop 14",
+            "brand": "ASUS",
+            "count": 5
+        }
+    },
+    {
+        "model": "MainApp.Item",
+        "pk": 3,
+        "fields": {
+            "name": "Ноутбук ASUS VivoBook PRO 15",
+            "brand": "ASUS",
+            "count": 76
+        }
+    },
+    {
+        "model": "MainApp.Item",
+        "pk": 4,
+        "fields": {
+            "name": "Ноутбук ASUS ZenBook 14",
+            "brand": "ASUS",
+            "count": 2
+        }
+    },
+    {
+        "model": "MainApp.Item",
+        "pk": 5,
+        "fields": {
+            "name": "Ультрабук ASUS ZenBook Flip 13",
+            "brand": "ASUS",
+            "count": 78
+        }
+    }
+]

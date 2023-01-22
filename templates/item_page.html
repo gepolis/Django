@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <title>Item</title>
+    <style>
+        * {
+            font-family: "Open Sans";
+        }
+        a {
+            text-decoration: none;
+        }
+        a:hover {
+            text-decoration: underline;
+        }
+    </style>
+</head>
+<body>
+<h1> Страница товара </h1>
+Название: {{ item.name }} <br>
+{% if item.count == 0 %}
+Количество: <span style="color: #FF0000;">Товара нет на складе</span> <br>
+{% else %}
+Количество: {{ item.count }} <br>
+{% endif %}
+Бренд: <a href="/items/{{item.brand}}">{{ item.brand }}</a> <br>
+Описание: {{ item.desc }} <br>
+<a href="/items"> Назад </a>
+</body>
+</html>
