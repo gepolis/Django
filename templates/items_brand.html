@@ -1,8 +1,11 @@
+{% load static %}
 <!DOCTYPE html>
 <html lang="ru">
 <head>
     <meta charset="UTF-8">
     <title>{{ brand }} items </title>
+    <link rel="stylesheet" href="{% static 'CSS/menu/style.css' %}">
+    <link href="{% static 'img/favicon.ico' %}" rel="shortcut icon" type="image/x-icon">
     <style>
         * {
             box-sizing: border-box;
@@ -70,10 +73,16 @@
     </style>
 </head>
 <body>
+<nav class="menu">
+    <a href="{% url 'items' %}"> Список товаров</a>
+    <a href="{% url 'items' %}"> Об авторе</a>
+    <a href="{% url 'items' %}"> Войти</a>
+</nav>
+<main class="content">
 <span class="title"> Список товаров {{ brand }}</span>
 {% for item in items %}
     <div class="product-item">
-        <img src="{{ item.imgurl }}">
+        <img src="{{ item.imgurl }}" alt="">
         <div class="product-list">
             <h3>{{ item.name }}</h3>
             <span class="desc">{{item.desc}}</span>
@@ -82,5 +91,6 @@
         </div>
     </div><br>
 {% endfor %}
+</main>
 </body>
 </html>

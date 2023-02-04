@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="keywords" content="test, site, website">
+    <meta name="description" content="Этот сайт является пробным сайтом">
+    <link href="{% static 'CSS/style.css' %}" rel="stylesheet" type="text/css">
+    <link href="{% static 'img/favicon.ico' %}" rel="shortcut icon" type="image/x-icon">
+    <title>Главная</title>
+</head>
+<body>
+<div id="page-wrap">
+    <header>
+        <a href="index.html" title="На главную" id="logo">Test-Site</a>
+        <span class="contact"><a href="{% url 'about' %}" title="Информация о нас">О нас</a></span>
+        {% if user.is_staff%}<span class="contact"><a href="/admin/MainApp/item" title="Информация о нас">Админка</a></span>{%endif%}
+        <input
+            type="text"
+            class="field" placeholder="Давай помогу найти"/><span class="right"><span class="contact"><a href="{% url 'register' %}"
+                                                                                                         title="Зарегистрироваться">Регистрация</a></span><span
+            class="contact"><a href="{% url 'login' %}" title="Войти">Вход</a></span></span>
+    </header>
+    <div class="clear"><br/></div>
+    <center>
+        <div id="menu">Разделы
+            <hr>
+        </div>
+        <div id="menuHrefs"></div>
+        <a href=""></a>
+    </center>
+</div>
+<footer>
+    <span class="left">Все права защищены &copy; 2023</span><span class="right">Соц. кнопки<img src="{% static 'img/VK.png' %}"
+                                                                                                alt="Группв Вконтакте"
+                                                                                                title="Группа Вконтакте"/></span>
+</footer>
+</body>
+</html>

@@ -1,0 +1,10 @@
+.menu {
+    border: 1px solid black;
+}
+.content {
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+footer {
+    border: 1px solid blue;
+}

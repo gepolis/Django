@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 {% load static %}
 <html lang="en">
@@ -24,16 +25,15 @@
     </header>
     <div class="clear"><br/></div>
     <center>
-        <div id="menu">Об авторе
-            <hr>
-        </div>
-        Имя: <b> Иван </b> <br>
-        Отчество: <b> Андреевич </b> <br>
-        Фамилия: <b> Аксенов </b> <br>
-        телефон: <b> 8-915-396-76-50</b>, <b> 9-965-117-15-06 </b> <br>
-        email: <b> developer@nlazurenko.ru </b> <br>
-</main>
-        <a href=""></a>
+        <div class="container py-5">
+	<h1>Register</h1>
+	<form method="POST">
+		{% csrf_token %}
+		{{ register_form }}
+		<button class="btn btn-primary" type="submit">Register</button>
+	</form>
+	<p class="text-center">If you already have an account, <a href="/login">login</a> instead.</p>
+</div>
     </center>
 </div>
 <footer>
@@ -41,8 +41,5 @@
                                                                                                 alt="Группв Вконтакте"
                                                                                                 title="Группа Вконтакте"/></span>
 </footer>
-</body>
-</html>
-
 </body>
 </html>
