@@ -1,11 +1,24 @@
+{% load static %}
 <!DOCTYPE html>
 <html lang="ru">
 <head>
     <meta charset="UTF-8">
     <title>Home</title>
+    <link rel="stylesheet" href="{% static 'CSS/menu/style.css' %}">
+    <link href="{% static 'img/favicon.ico' %}" rel="shortcut icon" type="image/x-icon">
 </head>
 <body>
-Добро пожаловать!
-<h1>"Изучаем django"</h1> <strong>Автор</strong>: <i>Лазуренко Н.С.</i>
+<nav class="menu">
+    <a href="{% url 'items' %}"> Список товаров</a>
+    <a href="{% url 'about' %}"> Об авторе</a>
+    <a href="{% url 'login' %}"> Войти</a>
+</nav>
+<main class="content">
+    Добро пожаловать!
+    {{user.is_authenticated}}
+    <h1>"Изучаем django"</h1> <strong>Автор</strong>: <i>Лазуренко Н.С.</i>
+</main>
+<footer>
+    (c) Аксенов. И. А.
 </body>
 </html>

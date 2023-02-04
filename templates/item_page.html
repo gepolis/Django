@@ -1,3 +1,4 @@
+{% load static %}
 <!DOCTYPE html>
 <html lang="ru">
 <head>
@@ -14,8 +15,17 @@
             text-decoration: underline;
         }
     </style>
+    <link rel="stylesheet" href="{% static 'CSS/menu/style.css' %}">
+    <link href="{% static 'img/favicon.ico' %}" rel="shortcut icon" type="image/x-icon">
 </head>
 <body>
+<nav class="menu">
+    <a href="{% url 'items' %}"> Список товаров</a>
+    <a href="{% url 'items' %}"> Об авторе</a>
+    <a href="{% url 'items' %}"> Войти</a>
+</nav>
+<main class="content">
+{% csrf_token %}
 <h1> Страница товара </h1>
 Название: {{ item.name }} <br>
 {% if item.count == 0 %}
@@ -23,8 +33,11 @@
 {% else %}
 Количество: {{ item.count }} <br>
 {% endif %}
+Цена: {{item.cost}}<br>
 Бренд: <a href="/items/{{item.brand}}">{{ item.brand }}</a> <br>
 Описание: {{ item.desc }} <br>
 <a href="/items"> Назад </a>
+<a href="add/{{item.pk}}">Add</a>
+</main>
 </body>
 </html>
